@@ -3,13 +3,13 @@
 
   &:hover {
     & p {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
   
     & h3,
     & h2 {
-      transform: translateY(0);
+      transform: translateY(0) !important;
     }
   }
 }

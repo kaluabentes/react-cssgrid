@@ -1,5 +1,5 @@
 :root {
-  --font-face: 'Poppins', sans-serif;
+  --font-face: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
   
   --color-text: rgb(38, 43, 51);
   --color-white: #fff;

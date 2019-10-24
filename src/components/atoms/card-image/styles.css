@@ -1,6 +1,8 @@
 .image {
-  height: 280px;
+  height: 374px;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 7px;
+  filter: opacity(0.9);
+  z-index: 1;
 }

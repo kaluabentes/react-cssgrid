@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+
+  &:hover {
+    & p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    & h3,
+    & h2 {
+      transform: translateY(0);
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+  text-align: center;
+  width: 100%;
+  padding: 0 30px;
+  z-index: 2;
+  transition: 0.3s;
+
+  & p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: inherit;
+  }
+
+  & h3,
+  & h2 {
+    transform: translateY(40px);
+    transition: inherit;
+  }
+}

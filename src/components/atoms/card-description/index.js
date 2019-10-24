@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './styles.css'
 
-const CardDescription = ({ children }) => <h3 className={styles.description}>{children}</h3>
+const CardDescription = ({ children }) => <p className={styles.description}>{children}</p>
 
 CardDescription.propTypes = {
   children: PropTypes.node.isRequired,

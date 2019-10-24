@@ -1,18 +1,17 @@
 import React from 'react'
 
 import Page from '_templates/page'
-import CardTag from '_atoms/card-tag'
-import CardTitle from '_atoms/card-title'
-import CardDescription from '_atoms/card-description'
-import CardImage from '_atoms/card-image'
 import amsterdanImage from '_images/Amsterdam.jpg'
+import Card from '_molecules/card'
 
 const Home = () => (
   <Page>
-    <CardTag>Front-end</CardTag>
-    <CardTitle>valtech_</CardTitle>
-    <CardDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis erat quis orci gravida sollicitudin.</CardDescription>
-    <CardImage src={amsterdanImage} alt="Amsterdan" />
+    <Card
+      tag="Front-end"
+      title="valtech_"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis erat quis orci gravida sollicitudin."
+      imageSrc={amsterdanImage}
+    />
   </Page>
 )
 

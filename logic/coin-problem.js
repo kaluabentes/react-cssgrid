@@ -135,17 +135,6 @@ const getCents = (cent) => {
 }
 
 const giveChange = (money) => {
-  const chashier = [
-    0.01, 
-    0.02, 
-    0.05, 
-    0.10, 
-    0.20, 
-    0.50, 
-    1, 
-    2
-  ]
-  const change = []
   const euro = Math.trunc(money)
   const cent = money.split('.')[1]
   const euros = getEuros(euro)

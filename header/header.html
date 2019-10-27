@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      padding-top: 50px;
+    }
+
+    header {
+      background: black;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      transition: 0.3s;
+    }
+
+    header.active {
+      transform: translateY(0);
+    }
+
+    .content {
+      background: white;
+      width: 300px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header id="header" class="active">Some Header on top of a page</header>
+  <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Header.init()
+    })
+
+    const Header = (() => {
+      let $headerElement
+
+      let currentScrollOffset = 0
+
+      const init = () => {
+        $headerElement = document.getElementById('header')
+
+        addEventListeners()
+      }
+
+      const addEventListeners = () => {
+        window.addEventListener('scroll', handleScroll)
+      }
+
+      const handleScroll = () => {
+        if (window.scrollY > currentScrollOffset) {
+          $headerElement.classList.remove('active')
+        }
+
+        if (window.scrollY < currentScrollOffset) {
+          $headerElement.classList.add('active')
+        }
+
+        currentScrollOffset = window.scrollY
+      }
+
+      return {
+        init,
+      }
+    })()
+  </script>
+</body>
+</html>

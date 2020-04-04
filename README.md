@@ -1,6 +1,6 @@
-# React Grid Challengue
+# React CSS Grid
 
-A simple application demonstrating the usage of css grid with React.js
+A simple application demonstrating the usage of CSS Grid with React.js
 
 ## Requirements
 

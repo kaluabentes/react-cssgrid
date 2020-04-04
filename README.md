@@ -1,6 +1,6 @@
-# Valtech Frontend Challengue
+# React Grid Challengue
 
-A simple application built for the Valtech's frontend challengue
+A simple application demonstrating the usage of css grid with React.js
 
 ## Requirements
 
